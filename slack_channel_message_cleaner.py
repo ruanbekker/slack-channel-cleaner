@@ -4,7 +4,7 @@ import datetime
 
 app_token = ''
 
-def delete_from(hours_in_int):
+def delete_from_in_hours(hours_in_int):
     now = datetime.datetime.now()
     response = (now - datetime.timedelta(hours=hours_in_int)).strftime("%s")
     return response
