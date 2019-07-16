@@ -24,10 +24,10 @@ List your slack channels:
 {u'system_events': u'ABCDEFGHI', u'test': u'BBCDEFGHI', ...
 ```
 
-Get all the messages from the slack channel that you want to delete. The method 2 parameters, channel_id and the timestamp where it needs to start deleting from. In this case a hour from now to the last message:
+Get all the messages from the slack channel that you want to delete. The method 2 parameters, channel_id and the timestamp where it needs to start deleting from (in hours). In this case a hour from now to the last message:
 
 ```
->>> timestamps = list_message_timestamps_by_channel(slack_channels['test'], delete_from(1))
+>>> timestamps = list_message_timestamps_by_channel(slack_channels['test'], delete_from_in_hours(1))
 >>> timestamps
 [u'1563309768.000400', u'1563309754.000300',...
 ```
